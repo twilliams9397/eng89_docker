@@ -39,3 +39,5 @@
 - `docker history image_name/ID` gives history of image
 
 - `docker run -d -p 2368:2368 ghost` - ghost website builder
+- `docker run -d -p 80:80 nginx` - nginx homepage, already reverse proxied so dont need :80 in browser
+- `/usr/share/nginx/html` has nginx default files
