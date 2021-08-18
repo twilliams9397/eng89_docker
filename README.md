@@ -20,5 +20,20 @@
 - microservices share resources of local host
 - VMs vs Docker: fewer layers to get to final product with docker, doesn't install virtual OS
 - `docker pull image_name` to download from docker hub, `docker run image_name` will run the contents of the image
-- `docker ps` list running containers, and can add `-a` for more info on containers that have already run
+- `docker ps` list running containers, and can add `-a` for more info on containers that have already run - when created and exited etc
 - if docker commands aren't working run `alias docker="winpty docker"` to resolve
+- `docker run -d -p 4000:4000 docs/docker.github.io` will download if the image isn't available locally, and shows docker documentation
+- `-d` is detached mode so it doesn't "hang" in the terminal while the image is running, `-p 4000:4000` is port mapping from default port 4000 to local port 4000
+- visit `localhost:4000` in browser to see the documentation from this image
+- `docker exec -it container_id sh` will log in to the shell of the container
+- from here, can inspect and edit contents, `exit` to exit out
+- `docker stop container_id` to stop background running, or `rm` will remove the container, and `rmi` for images. `-f` can be added to force delete
+- use stop if more work is being done on the container as it saves changes
+- `docker logs [option] container_name` can give different info regarding a container:
+- `--details` = Show extra details provided to logs
+- `--follow , -f` = Follow log output
+- `--since` = Show logs since timestamp
+- `--tail , -n`	= Number of lines to show from the end of the logs
+- `--timestamps , -t` = Show timestamps
+- `--until`	= Show logs before a timestamp, or relative (e.g. 42m for mins)
+- `docker history image_name/ID` gives history of image
