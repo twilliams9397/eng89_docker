@@ -42,4 +42,4 @@
 - `docker run -d -p 80:80 nginx` - nginx homepage, already reverse proxied so dont need :80 in browser
 - `/usr/share/nginx/html` has nginx web files
 - can replace `index.html` to alter website appearance
-- `docker cp container:src_path dest_path|-` is the copy command, and the container must be in running state
+- `docker cp src_path container:dest_path` is the copy command, and the container must be already created (either running or stopped) - e.g. `docker cp ~/Documents/Sparta/Docker/index.html 6d05f4526d47:/usr/share/nginx/html`
