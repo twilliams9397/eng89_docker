@@ -15,7 +15,7 @@
 ![docker](docker.png)
 - used like github - repos, version history
 - can set up webhooks for pushes to repos
-- very lightweight 
+- very lightweight and launches quicker than VMs
 - competitors: rkt, HyperV etc
 - microservices share resources of local host
 - VMs vs Docker: fewer layers to get to final product with docker, doesn't install virtual OS
