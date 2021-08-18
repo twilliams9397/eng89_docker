@@ -40,4 +40,6 @@
 
 - `docker run -d -p 2368:2368 ghost` - ghost website builder
 - `docker run -d -p 80:80 nginx` - nginx homepage, already reverse proxied so dont need :80 in browser
-- `/usr/share/nginx/html` has nginx default files
+- `/usr/share/nginx/html` has nginx web files
+- can replace `index.html` to alter website appearance
+- `docker cp container:src_path dest_path|-` is the copy command, and the container must be in running state
