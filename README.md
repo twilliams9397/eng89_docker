@@ -9,6 +9,7 @@
 - service as a whole doesn't need to be taken down to add more microservices, e.g. adding app/web features can be done without taking down the whole server
 - easily scalable but more complicated to deploy than monolith
 - used by pretty much everyone (Netflix, uber, spotify etc), and if not it is being planned
+- microservice is better for bigger and more complex deployments, with scalability as a requirement
 
 # Docker and Dockerhub
 ![docker](docker.png)
