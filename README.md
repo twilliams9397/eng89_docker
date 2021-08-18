@@ -4,9 +4,10 @@
 
 ## Microservice architecture
 - each service on different machines
-- whole system doesn't rely on one machine, so if one machine goes down only one service is impacted
-- building/testing of each service is all independent
-- service as a whole doesn't need to be taken down to add more microservices - easily scalable
+- whole system doesn't rely on one machine like monolith does, so if one machine goes down only one service is impacted
+- building/testing of each microservice is all independent
+- service as a whole doesn't need to be taken down to add more microservices, e.g. adding app/web features can be done without taking down the whole server
+- easily scalable
 - used by pretty much everyone (Netflix, uber, spotift etc), and if not it is being planned
 
 # Docker and Dockerhub
@@ -17,4 +18,5 @@
 - competitors: rkt, HyperV etc
 - microservices share resources of local host
 - VMs vs Docker: fewer layers to get to final product with docker, doesn't install virtual OS
-
+- `docker pull image_name` to download from docker hub, `docker run image_name` will run the contents of the image
+- `docker ps` list running containers, and can add `-a` for more info on containers that have already run
