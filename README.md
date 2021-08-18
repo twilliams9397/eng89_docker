@@ -37,3 +37,5 @@
 - `--timestamps , -t` = Show timestamps
 - `--until`	= Show logs before a timestamp, or relative (e.g. 42m for mins)
 - `docker history image_name/ID` gives history of image
+
+- `docker run -d -p 2368:2368 ghost` - ghost website builder
