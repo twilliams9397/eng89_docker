@@ -46,5 +46,38 @@
 - `docker cp src_path container:dest_path` is the copy command, and the container must be already created (either running or stopped) - e.g. `docker cp ~/Documents/Sparta/Docker/index.html 6d05f4526d47:/usr/share/nginx/html`
 - `docker commit 6d05f4526d47 twilliams9397/eng89_docker` and `docker push -a twilliams9397/eng89_docker` are used to push to a docker repository
 - Dockerfile (syntax important) can be used to automate docker tasks
+```
+# build an image to automate the tasks to launch static website page using nginx webserver with docker
+# building customised docker images
+
+# use official nginx image
+# add info/label with name/email
+# copy file/folder from local host to container
+# default port 80 will be used for nginx
+# CMD with the final command - as an example npm start
+
+# FROM is keyword to use the image
+# can choose specific version, default if not chosen is latest
+
+FROM nginx
+
+# label with name and email - optional
+
+LABEL MAINTAINER=twilliams@spartaglobal.com
+
+# copy the data - our index.html
+# if local data is not in same location use absolute path
+
+COPY index.html /usr/share/nginx/html
+
+# add the port
+
+EXPOSE 80
+
+# final command, make nginx global
+# commands from official nginx image
+
+CMD ["nginx", "-g", "daemon off;"]
+```
 - to run, `docker build -t dockerhub_id/image_name .`, where there `.` finds the local Dockerfile
 - use the `docker run` command to ensure it is working correctly
