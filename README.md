@@ -46,3 +46,4 @@
 - `docker cp src_path container:dest_path` is the copy command, and the container must be already created (either running or stopped) - e.g. `docker cp ~/Documents/Sparta/Docker/index.html 6d05f4526d47:/usr/share/nginx/html`
 - `docker commit 6d05f4526d47 twilliams9397/eng89_docker` and `docker push -a twilliams9397/eng89_docker` are used to push to a docker repository
 - Dockerfile (syntax important) can be used to automate docker tasks
+- to run, `docker build -t dockerhub_id/image_name .`, where there `.` finds the local Dockerfile
