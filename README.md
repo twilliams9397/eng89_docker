@@ -80,5 +80,6 @@ EXPOSE 80
 
 CMD ["nginx", "-g", "daemon off;"]
 ```
+
 - to run, `docker build -t dockerhub_id/image_name .`, where there `.` finds the local Dockerfile
 - use the `docker run` command to ensure it is working correctly
