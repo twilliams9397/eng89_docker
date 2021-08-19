@@ -1,0 +1,40 @@
+{% extends "base.html" %} <!-- header -->
+
+{% block content %}
+
+    <div class="content">
+        <div class="content-wrapper">
+
+            <div class="content-left">
+                <h1>Vacancies</h1>
+                <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p>
+                <br>
+                <form action="" method="post" novalidate>
+                    {{ search.hidden_tag() }}
+                    {{ search.search_term(size=32, class_="input search", placeholder="Search") }}
+                    {{ search.search_button(class_="button") }}
+                </form>
+                <br>
+                {% for msg in get_flashed_messages() %}
+                  <h2>{{ msg }}</h2>
+                {% endfor %}
+            </div>
+            <div class="content-flask content-right">
+                {% for row in data %}
+                    <div class="vac_card">
+                        <div class="vac-wrap">
+                            <h3>{{row[0]}}</h3>
+                            <ul>
+                                <li class="vac-item"><span class="material-icons m_icon">location_on</span>{{row[1]}}</li>
+                                <li class="vac-item"><span class="material-icons m_icon">business</span>{{row[2]}}</li>
+                                <li class="vac-item"><span class="material-icons m_icon">payments</span>{{row[4]}}</li>
+                                <li class="vac-item"><span class="material-icons m_icon">update</span>{{row[5]}}</li>
+                            </ul>
+                            <p>{{row[3]}}</p>
+                        </div>
+                    </div>
+                {% endfor %}
+            </div>
+        </div>
+    </div>
+{% endblock %}
