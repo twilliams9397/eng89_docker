@@ -33,3 +33,7 @@ CMD ["node", "app.js"]
 ```
 - using the dockerfile, build the container `docker build -t twilliams9397/eng89_nodeapp .`
 - once it is built, run with port map to port 80 and check localhost - `docker run -d -p 80:3000 twilliams9397/eng89_nodeapp`
+
+## IT Jobs Watch App Container
+- `requirements.txt` contains all necessary pytho dependencies to `pip install`
+- Dockerfile installs these dependencises first, then copies the .py files then runs the flask app

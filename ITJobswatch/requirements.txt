@@ -2,11 +2,10 @@ flask
 flask_wtf
 passlib
 requests
-pandas
-sqlite3
+# pandas==1.3.2
+# sqlite3
 flask_table
-numpy
 list_function
-os
-csv
-lxml
+# os
+# csv
+# lxml
