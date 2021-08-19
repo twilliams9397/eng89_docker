@@ -12,7 +12,7 @@ COPY . .
 
 RUN npm install -g npm@7.20.6
 
-RUN node seeds/seed.js
+# RUN node seeds/seed.js
 
 EXPOSE 3000
 
