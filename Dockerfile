@@ -1,0 +1,1 @@
+# build an image to automate the tasks to launch static website page using nginx webserver with docker

@@ -23,7 +23,7 @@
 - `docker ps` list running containers, and can add `-a` for more info on containers that have already run - when created and exited etc
 - if docker commands aren't working run `alias docker="winpty docker"` to resolve
 - `docker run -d -p 4000:4000 docs/docker.github.io` will download if the image isn't available locally, and shows docker documentation
-- `-d` is detached mode so it doesn't "hang" in the terminal while the image is running, `-p 4000:4000` is port mapping from default port 4000 to local port 4000
+- `-d` is detached mode so it doesn't "hang" in the terminal while the image is running, `-p 4000:4000` is port mapping from default port 4000 to local port 4000 (browser will use second port)
 - visit `localhost:4000` in browser to see the documentation from this image
 - `docker exec -it container_id sh` will log in to the shell of the container
 - from here, can inspect and edit contents, `exit` to exit out
@@ -40,7 +40,9 @@
 
 - `docker run -d -p 2368:2368 ghost` - ghost website builder
 - `docker run -d -p 80:80 nginx` - nginx homepage, already reverse proxied so dont need :80 in browser
+- if a port is busy, map to a different port in the run command
 - `/usr/share/nginx/html` has nginx web files
 - can replace `index.html` to alter website appearance
 - `docker cp src_path container:dest_path` is the copy command, and the container must be already created (either running or stopped) - e.g. `docker cp ~/Documents/Sparta/Docker/index.html 6d05f4526d47:/usr/share/nginx/html`
 - `docker commit 6d05f4526d47 twilliams9397/eng89_docker` and `docker push -a twilliams9397/eng89_docker` are used to push to a docker repository
+- Dockerfile (syntax important) can be used to automate docker tasks
