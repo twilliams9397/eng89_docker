@@ -47,7 +47,7 @@
 - `docker commit 6d05f4526d47 twilliams9397/eng89_docker` and `docker push -a twilliams9397/eng89_docker` are used to push to a docker repository
 - `docker pull twilliams9397/eng89_nginx_automate` will pull from DockerHub and then can be run
 - Dockerfile (syntax important) can be used to automate docker tasks
-```
+```shell
 # build an image to automate the tasks to launch static website page using nginx webserver with docker
 # building customised docker images
 
