@@ -83,3 +83,14 @@ CMD ["nginx", "-g", "daemon off;"]
 
 - to run, `docker build -t dockerhub_id/image_name .`, where there `.` finds the local Dockerfile
 - use the `docker run` command to ensure it is working correctly
+
+## Volumes
+- `docker volume create vol_name` will create a volume
+- volumes can be listed with `ls` and inspected with `inspect vol_name` after the `docker volume`
+- or `docker run -d -v /Users/Tom1/Documents/Sparta/Docker:/usr/share/nginx/html -p 80:80 twilliams9397/eng89_nginx_automate` will run and auto update when the file is locally edited
+
+
+
+
+
+
