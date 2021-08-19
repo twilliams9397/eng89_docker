@@ -23,7 +23,7 @@
 - `docker ps` list running containers, and can add `-a` for more info on containers that have already run - when created and exited etc
 - if docker commands aren't working run `alias docker="winpty docker"` to resolve
 - `docker run -d -p 4000:4000 docs/docker.github.io` will download if the image isn't available locally, and shows docker documentation
-- `-d` is detached mode so it doesn't "hang" in the terminal while the image is running, `-p 4000:4000` is port mapping from default port 4000 to local port 4000 (browser will use second port)
+- `-d` is detached mode so it doesn't "hang" in the terminal while the image is running, `-p 4000:4000` is port mapping from default port 4000 to local port 4000 (browser will use first port)
 - visit `localhost:4000` in browser to see the documentation from this image
 - `docker exec -it container_id sh` will log in to the shell of the container
 - from here, can inspect and edit contents, `exit` to exit out
@@ -47,3 +47,4 @@
 - `docker commit 6d05f4526d47 twilliams9397/eng89_docker` and `docker push -a twilliams9397/eng89_docker` are used to push to a docker repository
 - Dockerfile (syntax important) can be used to automate docker tasks
 - to run, `docker build -t dockerhub_id/image_name .`, where there `.` finds the local Dockerfile
+- use the `docker run` command to ensure it is working correctly
