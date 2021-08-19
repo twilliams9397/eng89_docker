@@ -37,3 +37,4 @@ CMD ["node", "app.js"]
 ## IT Jobs Watch App Container
 - `requirements.txt` contains all necessary pytho dependencies to `pip install`
 - Dockerfile installs these dependencises first, then copies the .py files then runs the flask app
+- `docker run -p 80:5000 twilliams9397/eng89_itjobs_app` runs the web app and maps the flask port 5000 to localhost 
