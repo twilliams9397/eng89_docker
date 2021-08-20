@@ -15,5 +15,6 @@ services:
     # set variable for db port
     environment:
       - DB_HOST=mongodb://db:27017/posts
+    # links the two images 
     depends_on:
       - db
