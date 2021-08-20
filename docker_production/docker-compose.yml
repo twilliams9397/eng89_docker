@@ -6,8 +6,8 @@ services:
     image: mongo
     restart: always
     ports: [27017:27017]
-    volume: 
-      - "data:/data/db"
+  volume: 
+    - ./mongod.conf:/etc/mongod.conf
 
   web:
     # start up the web app image and map to localhost
@@ -22,3 +22,6 @@ services:
       - db
       # can also use links here
     #command: node seeds/seed.js
+volumes:
+  db:
+

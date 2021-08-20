@@ -13,7 +13,7 @@ COPY . .
 
 EXPOSE 3000
 
-CMD ["node", "seeds/seed.js", "&&", "node", "app.js"]
+CMD ["node", "app.js"]
 # CMD run inside the container
 
 # compresses image with same functionality
@@ -32,4 +32,4 @@ COPY --from=app /usr/src/app /usr/src/app
 
 EXPOSE 3000
 
-CMD ["node", "seeds/seed.js", "&&", "node", "app.js"]
+CMD ["node", "app.js"]
