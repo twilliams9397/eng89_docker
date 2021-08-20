@@ -83,6 +83,7 @@ CMD ["nginx", "-g", "daemon off;"]
 
 - to build an image from dockerhub, `docker build -t dockerhub_id/image_name .`, where there `.` finds the local Dockerfile
 - use the `docker run` command to ensure it is working correctly
+- when updating versions of containers (v1, v2 etc) if there is any issue with the latest version there is a rollback command to return to a previous stable version
 
 ## Volumes
 - `docker volume create vol_name` will create a volume
