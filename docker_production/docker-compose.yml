@@ -9,7 +9,7 @@ services:
 
   web:
     # start up the web app image and map to localhost
-    build: ./app
+    build: .
     restart: always
     ports: [80:3000]
     # set variable for db port
