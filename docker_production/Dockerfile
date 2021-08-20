@@ -8,11 +8,13 @@ RUN npm install -g npm@7.20.6
 
 COPY . .
 
-RUN node seeds/seed.js
+# RUN node seeds/seed.js
+# RUN command is used to run commands while building
 
 EXPOSE 3000
 
-CMD ["node", "app.js"]
+CMD ["node", "seeds/seed.js", "&&", "node", "app.js"]
+# CMD run inside the container
 
 # compresses image with same functionality
 
@@ -26,8 +28,8 @@ RUN npm install -g npm@7.20.6
 
 COPY --from=app /usr/src/app /usr/src/app
 
-RUN node seeds/seed.js
+# RUN node seeds/seed.js
 
 EXPOSE 3000
 
-CMD ["node", "app.js"]
+CMD ["node", "seeds/seed.js", "&&", "node", "app.js"]
